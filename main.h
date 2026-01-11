@@ -1,14 +1,15 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdarg.h> /* va_list, va_start, va_arg, va_end */
+#include <stdarg.h>
+#include <unistd.h>
+#include <limits.h>
 
-/* _printf function prototype */
 int _printf(const char *format, ...);
 
-/* helper function prototypes */
-int print_char(char c);
-int print_string(char *s);
+int print_char(va_list *args);
+int print_string(va_list *args);
+int print_int(va_list *args);
 
-#endif /* MAIN_H */
+#endif
 
